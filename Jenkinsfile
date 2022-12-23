@@ -22,7 +22,7 @@ pipeline {
                 script{
                     //withCredentials([string(credentialsId: 'docpwd-id', variable: 'docpwd')]) {
                         bat 'docker login -u osmansameer91 -p Kurama@99#'
-                        //${docpwd}'
+                        //${docpwd}' ${dockerpassword}'
                     }
                     bat 'docker push osmansameer91/springboot-restful-webservices'
                 }
